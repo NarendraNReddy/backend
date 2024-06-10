@@ -9,7 +9,7 @@ pipeline {
         disableConcurrentBuilds()
         ansiColor('xterm')
     }
-    
+
     environment{
         def appVersion = '' //variable declaration
     }    
@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script{
                     def packageJson = readJSON file: 'package.json'
-                    def appVersion = packageJson.version  
+                    appVersion = packageJson.version  
                     echo "app version is $appVersion"     
                 }          
             }
