@@ -24,7 +24,7 @@ pipeline {
                 sh """
                   npm install
                   ls -ltr
-                  echo $appVersion
+                  echo "app version is $appVersion" 
                 """
                 
             }
